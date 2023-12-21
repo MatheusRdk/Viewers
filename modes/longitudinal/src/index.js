@@ -61,6 +61,7 @@ const extensionDependencies = {
   '@ohif/extension-cornerstone-dicom-rt': '^3.0.0',
   '@ohif/extension-dicom-pdf': '^3.0.1',
   '@ohif/extension-dicom-video': '^3.0.1',
+  "disease-button-extension": "^0.0.1"
 };
 
 function modeFactory({ modeConfiguration }) {
@@ -211,7 +212,7 @@ function modeFactory({ modeConfiguration }) {
           return {
             id: ohif.layout,
             props: {
-              leftPanels: [tracked.thumbnailList],
+              leftPanels: [tracked.thumbnailList, 'disease-button-extension.panelModule.disease'],
               rightPanels: [dicomSeg.panel, tracked.measurements],
               rightPanelDefaultClosed: true,
               viewports: [
