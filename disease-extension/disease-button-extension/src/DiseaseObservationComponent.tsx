@@ -98,7 +98,7 @@ function DiseaseObservationComponent() {
             >
             Salvar
           </button>
-          {message && <p className='text-green-500 mb-4 p-4'>{message}</p>}
+          {message && <p className={message.includes('sucesso') ? 'text-green-500' : 'text-red-500'} mb-4 p-4>{message}</p>}
         </div>
       ) : (
         'Loading...'
