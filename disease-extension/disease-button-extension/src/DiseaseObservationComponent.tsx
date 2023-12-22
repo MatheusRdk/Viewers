@@ -10,7 +10,7 @@ function DiseaseObservationComponent() {
   const [message, setMessage] = useState(''); //Mensagem a ser mostrada conforme resposta da api
 
 
-  useEffect(() => {
+  useEffect(() => { //Ao abrir a opção "Observação" que é este componente, será pego o studyId da url e a chamada para pegar o nome do paciente.
     const fetchData = async () => {
       try {
         const studyId = await ObservationService.getStudyId();
